@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Para Abi 💜</title>
+    <title>Para Abi ❤️</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&family=Dosis:wght@400;700&display=swap');
@@ -24,7 +24,6 @@
 
         .title-font { font-family: 'Pacifico', cursive; }
         
-        /* Animaciones base */
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         .floating { animation: float 3s ease-in-out infinite; }
         
@@ -33,12 +32,11 @@
         .hidden-page { display: none; opacity: 0; transition: opacity 1s ease-in-out; }
         .visible-page { display: flex; opacity: 1; }
         
-        /* --- CORRECCIÓN LISTA Y VISTAS --- */
         .hidden-content { display: none !important; }
         .fade-in { animation: fadeIn 0.4s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* --- ESTILOS DEL TOCADISCOS --- */
+  
         :root {
             --color-bg: #f7f7f7;
             --color-player: #f4f3f2;
@@ -162,7 +160,6 @@
             transform: rotate(10deg);
         }
 
-        /* --- CONTROLES --- */
         .controls-left {
             position: absolute;
             bottom: 20px;
@@ -214,7 +211,6 @@
             to { transform: translate(-50%, -50%) rotate(360deg); }
         }
 
-        /* --- TARJETA DE PAPEL (Playlist) --- */
         .paper-card {
             background-color: #fffaf0;
             background-image: radial-gradient(#d1d5db 1px, transparent 1px);
@@ -227,7 +223,6 @@
             z-index: 20;
         }
 
-        /* --- NUEVO ESTILO NOTA (Post-it) --- */
         .note-card {
             background-color: #fef3c7; /* Amarillo post-it suave */
             background-image: none; /* Quitamos la cuadrícula de la paper-card */
@@ -286,11 +281,8 @@
     <canvas id="confetti-canvas" class="absolute top-0 left-0 w-full h-full pointer-events-none z-50"></canvas>
     <audio id="audio-player"></audio>
 
-    <!-- PANTALLA 1: LA PREGUNTA -->
     <div id="question-container" class="bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-2xl text-center max-w-md w-[90%] mx-auto border-4 border-purple-300 z-10 transition-all duration-500 relative flex flex-col items-center">
         
-        <!-- TU IMAGEN DE SNOOPY -->
-        <!-- Asegúrate de tener el archivo 'sn.jpg' en la misma carpeta -->
         <img src="sn.png" alt="Snoopy con flores" class="mb-6 floating w-40 h-auto drop-shadow-xl rounded-2xl mx-auto object-contain">
         
         <h1 class="text-3xl sm:text-4xl text-purple-600 mb-2 title-font">¡Hola Abi!</h1>
@@ -311,15 +303,12 @@
         </div>
     </div>
 
-    <!-- PANTALLA 2: ÉXITO Y MÚSICA -->
-    <!-- CAMBIO: Ahora usamos overflow-y-auto y padding para permitir scroll si las tarjetas no caben -->
     <div id="success-container" class="hidden-page flex-col items-center justify-start overflow-y-auto text-center z-30 w-full h-full absolute top-0 left-0 bg-white/60 backdrop-blur-md pt-10 pb-10">
         
         <div class="w-full max-w-md px-4 flex flex-col items-center justify-center shrink-0">
             
             <h1 class="text-3xl text-purple-600 mb-4 title-font drop-shadow-sm mt-2">Holaaaaaaaaa</h1>
             
-            <!-- TOCADISCOS -->
             <div id="player" class="player-wrapper mb-6 transform scale-95 sm:scale-100">
                 <div class="turntable">
                     <div id="vinyl-record" class="record">
@@ -357,32 +346,26 @@
                 </div>
             </div>
 
-            <!-- TARJETA 1: PLAYLIST -->
             <div class="paper-card p-5 rounded-xl shadow-lg border border-purple-100 mb-6 shrink-0">
                 
-                <!-- HEADER FIJO -->
                 <p id="card-title" class="text-xs text-purple-400 font-bold mb-2 text-center uppercase tracking-widest border-b border-purple-200 pb-2 flex-shrink-0">
                     Canciones que me recuerdan a ti
                 </p>
 
-                <!-- CONTENIDO SCROLLABLE (Lista y Razones) -->
                 <div class="card-content relative">
                     
-                    <!-- VISTA 1: LISTA -->
                     <div id="playlist-view" class="fade-in">
                         <ul id="playlist" class="space-y-1 text-gray-600 font-medium text-sm">
-                            <!-- JS genera esto -->
                         </ul>
 
                         <div class="mt-4 text-center">
-                            <a href="https://open.spotify.com/playlist/TU_PLAYLIST_ID_AQUI" target="_blank" class="inline-flex items-center gap-2 bg-[#1DB954] hover:bg-[#1ed760] text-white font-bold py-2 px-5 rounded-full text-xs transition-transform hover:scale-105 shadow-md no-underline">
+                            <a href="https://open.spotify.com/playlist/679WDHw5UehsRphspBLgKf?si=54af5911d1cc4688&pt=5ca03fa96ce485bad7d3f2735468e9dc" target="_blank" class="inline-flex items-center gap-2 bg-[#1DB954] hover:bg-[#1ed760] text-white font-bold py-2 px-5 rounded-full text-xs transition-transform hover:scale-105 shadow-md no-underline">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
                                 Abrir en Spotify
                             </a>
                         </div>
                     </div>
 
-                    <!-- VISTA 2: RAZONES -->
                      <div id="reasons-view" class="hidden-content fade-in">
                         <div class="text-sm text-gray-700 font-handwritten italic space-y-3 px-1">
                             
@@ -407,7 +390,6 @@
 
                 </div>
 
-                <!-- FOOTER FIJO (BOTÓN TOGGLE) -->
                 <div class="card-footer">
                     <button id="toggle-view-btn" class="toggle-btn">
                         💌 ¿Por qué estas canciones?
@@ -416,7 +398,6 @@
 
             </div>
 
-            <!-- TARJETA 2: UNA PEQUEÑA NOTA (ESTILO POST-IT) -->
             <div class="note-card w-full relative z-20 p-5 rounded-xl mb-6 shrink-0 h-auto min-h-[150px] text-left">
                 <p class="text-xs text-yellow-700 font-bold mb-2 text-center uppercase tracking-widest border-b border-yellow-200 pb-2">
                     Una pequeña nota...
@@ -434,8 +415,6 @@
     </div>
 
     <script>
-        // --- SELECCIÓN FINAL DE 5 CANCIONES ---
-        // IMPORTANTE: Asegúrate de que los archivos en tu carpeta tengan estos nombres exactos (sin espacios)
         const songs = [
             { title: "Le conté a Dios sobre ti", artist: "Josías Onoto", url:  "Le_conté_a_Dios_sobre_ti_Vals_Josías Onoto.mp3" },
             { title: "Flores", artist: "Sebastián Romero", url: "Flores_Sebastián_Romero.mp3" },
@@ -583,12 +562,11 @@
             successContainer.classList.add('visible-page');
             startConfetti();
             loadSong(0);
-            playAudio(); // Se añade autoplay al confirmar
+            playAudio(); 
         });
 
         initPlaylist();
 
-        // Confetti
         const canvas = document.getElementById('confetti-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
